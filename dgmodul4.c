@@ -53,8 +53,8 @@ static uint32_t CheckQspiFlashId(void)
 	gDeviceId		= deviceId;
 	switch(manuId)
 	{
-		case CYPRESS_MANUFACTURER_ID:
-			PutStr(" Cypress : ", 0);
+		case INFINEON_MANUFACTURER_ID:
+			PutStr(" Infineon : ", 0);
 			switch(deviceId)
 			{
 				case DEVICE_ID_S25FS512S:
@@ -67,6 +67,11 @@ static uint32_t CheckQspiFlashId(void)
 						gQspi_sa_size    = SA_256KB;
 						gQspi_end_addess = TOTAL_SIZE_16MB - 0x8000 - 1;
 				break;
+                case DEVICE_ID_S25FL128L:
+                        PutStr("S25FL128L", 1);
+                        gQspi_sa_size    = SA_64KB;
+                        gQspi_end_addess = TOTAL_SIZE_16MB - 0x8000 - 1;
+                break;
 				default:
 					ret = 1;
 				break;
@@ -132,8 +137,8 @@ static uint32_t CheckQspiFlashId(void)
 			PutStr(" Macronix : ", 0);
 			switch(deviceId)
 			{
-				case DEVICE_ID_MX25L12805:
-						PutStr("MX25L12805", 1);
+				case DEVICE_ID_MX25L12833F:
+						PutStr("MX25L12833F", 1);
 						gQspi_sa_size    = SA_64KB;
 						gQspi_end_addess = TOTAL_SIZE_16MB - 0x8000 - 1;
 				break;
@@ -147,8 +152,8 @@ static uint32_t CheckQspiFlashId(void)
 						gQspi_sa_size    = SA_64KB;
 						gQspi_end_addess = TOTAL_SIZE_64MB - 0x8000 - 1;
 				break;
-				case DEVICE_ID_MX66U25635F:
-						PutStr("MX66U25635F", 1);
+				case DEVICE_ID_MX25U25645G:
+						PutStr("MX25U25645G", 1);
 						gQspi_sa_size    = SA_64KB;
 						gQspi_end_addess = TOTAL_SIZE_32MB - 0x8000 - 1;
 				break;

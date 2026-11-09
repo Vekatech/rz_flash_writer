@@ -366,7 +366,7 @@ void SectorEraseQspi_Flash(uint32_t EraseStatAdd, uint32_t EraseEndAdd)
 	PutStr(str, 1);
 #endif
 
-	if ((gManufacturerId == CYPRESS_MANUFACTURER_ID ) && (gDeviceId == DEVICE_ID_S25FS128S))
+	if ((gManufacturerId == INFINEON_MANUFACTURER_ID ) && (gDeviceId == DEVICE_ID_S25FS128S))
 	{
 		if (gQspi_sa_size == SA_256KB)
 		{

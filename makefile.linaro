@@ -44,6 +44,24 @@ DEVICE   = RZG2L
 DDR_TYPE = DDR4
 DDR_SIZE = 4GB
 SWIZZLE  = T2C
+else ifeq ("$(BOARD)", "VKRZG2L")
+#--------------------------------------
+# RZ/G2L VK-RZ/G2L board
+#--------------------------------------
+FILENAME_ADD = _VKRZG2L
+DEVICE   = RZG2L
+DDR_TYPE = DDR4
+DDR_SIZE = 2GB_1PCS
+SWIZZLE  = T1BC
+else ifeq ("$(BOARD)", "VKCMG2L")
+#--------------------------------------
+# VK-CMG2L board
+#--------------------------------------
+FILENAME_ADD = _VKCMG2L
+DEVICE   = RZG2L
+DDR_TYPE = DDR4
+DDR_SIZE = 2GB_1PCS
+SWIZZLE  = T1BC
 else ifeq ("$(BOARD)", "RZG2LC_SMARC")
 #--------------------------------------
 # RZ/G2LC Smarc board
@@ -62,6 +80,33 @@ DEVICE   = RZG2LC
 DDR_TYPE = DDR3L
 DDR_SIZE = 1GB
 SWIZZLE  = T3CL
+else ifeq ("$(BOARD)", "VKRZG2LC")
+#--------------------------------------
+# VK-RZ/G2LC board
+#--------------------------------------
+FILENAME_ADD = _VKRZG2LC
+DEVICE   = RZG2LC
+DDR_TYPE = DDR4
+DDR_SIZE = 2GB_1PCS
+SWIZZLE  = T3BC
+else ifeq ("$(BOARD)", "VKCMG2LC")
+#--------------------------------------
+# VK-CMRZ/G2LC board
+#--------------------------------------
+FILENAME_ADD = _VKCMG2LC
+DEVICE   = RZG2LC
+DDR_TYPE = DDR4
+DDR_SIZE = 2GB_1PCS
+SWIZZLE  = T3BC
+else ifeq ("$(BOARD)", "VKCMG2LC_1")
+#--------------------------------------
+# VK-CMRZ/G2LC board (1GB DDR4)
+#--------------------------------------
+FILENAME_ADD = _VKCMG2LC
+DEVICE   = RZG2LC
+DDR_TYPE = DDR4
+DDR_SIZE = 1GB_1PCS
+SWIZZLE  = T3BC
 else ifeq ("$(BOARD)", "RZG2UL_TYPE1_DEV")
 #--------------------------------------
 # RZ/G2UL Type1 DDR4 Dev board
@@ -87,6 +132,16 @@ else ifeq ("$(BOARD)", "RZG2UL_SMARC")
 # RZ/G2UL Smarc board
 #--------------------------------------
 FILENAME_ADD = _RZG2UL_SMARC
+DEVICE   = RZG2UL
+DDR_TYPE = DDR4
+DDR_SIZE = 1GB_1PCS
+SWIZZLE  = T3BCUD2
+DEVICE_TYPE = 1
+else ifeq ("$(BOARD)", "VKRZG2UL")
+#--------------------------------------
+# VK-RZ/G2UL board
+#--------------------------------------
+FILENAME_ADD = _VKRZG2UL
 DEVICE   = RZG2UL
 DDR_TYPE = DDR4
 DDR_SIZE = 1GB_1PCS
@@ -148,6 +203,24 @@ DEVICE   = RZV2L
 DDR_TYPE = DDR4
 DDR_SIZE = 4GB
 SWIZZLE  = T2C
+else ifeq ("$(BOARD)", "VKRZV2L")
+#--------------------------------------
+# VK-RZV2L board
+#--------------------------------------
+FILENAME_ADD = _VKRZV2L
+DEVICE   = RZV2L
+DDR_TYPE = DDR4
+DDR_SIZE = 2GB_1PCS
+SWIZZLE  = T1BC
+else ifeq ("$(BOARD)", "VKCMV2L")
+#--------------------------------------
+# VK-CMV2L board
+#--------------------------------------
+FILENAME_ADD = _VKCMV2L
+DEVICE   = RZV2L
+DDR_TYPE = DDR4
+DDR_SIZE = 2GB_1PCS
+SWIZZLE  = T1BC
 else ifeq ("$(BOARD)", "RZA3UL_DEV")
 #--------------------------------------
 # RZ/A3UL DDR4 Dev board
